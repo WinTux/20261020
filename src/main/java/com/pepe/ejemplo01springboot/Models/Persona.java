@@ -1,9 +1,9 @@
 package com.pepe.ejemplo01springboot.Models;
 
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private int edad;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
 
     public Persona() {
 

@@ -16,4 +16,5 @@ public class PersonaController {
         System.out.printf("Nombre: %s; Apellido: %s; Edad: %d",p.getNombre(),p.getApellido(),p.getEdad());
         return "ok";
     }
+
 }
