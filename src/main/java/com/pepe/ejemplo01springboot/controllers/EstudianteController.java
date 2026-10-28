@@ -1,6 +1,10 @@
 package com.pepe.ejemplo01springboot.controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.fge.jsonpatch.JsonPatch;
 import com.pepe.ejemplo01springboot.Models.Estudiante;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -8,7 +12,6 @@ import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.beans.FeatureDescriptor;
 import java.lang.reflect.Field;
 import java.net.URI;
 import java.util.HashMap;
@@ -16,14 +19,15 @@ import java.util.Map;
 
 @Controller
 public class EstudianteController {
+    ObjectMapper objectMapper = new ObjectMapper();
     private static Map<String, Estudiante> estudiantes = new HashMap<>();
     static {
         Estudiante e1 = new Estudiante("Pepe","Perales",21,"Contabilidad","est001");
         Estudiante e2 = new Estudiante("Ana","Rocha",21,"Ing. de Sistemas","est008");
         Estudiante e3 = new Estudiante("Sofía","Sosa",21,"Odontología","est201");
-        estudiantes.put("1",e1);
-        estudiantes.put("2",e2);
-        estudiantes.put("3",e3);
+        estudiantes.put(e1.getCodigo(),e1);
+        estudiantes.put(e2.getCodigo(),e2);
+        estudiantes.put(e3.getCodigo(),e3);
     }
 
     @GetMapping("/estudiantes")
@@ -71,9 +75,39 @@ public class EstudianteController {
         }
         return new ResponseEntity<>("Se modificó, usando PATCH, al estudiante "+codigo, HttpStatus.OK);
     }
+    // TODO Revisar
+    @PatchMapping(path="/estudiantes/patch/{codigo}", consumes = "application/json-patch+json")
+    public ResponseEntity<String> modificarEstudianteConJsonPatch(@PathVariable("codigo") String codigo, @RequestBody JsonPatch atributosModificados){
+        try{
+            Estudiante estOriginal = estudiantes.get(codigo);
+            JsonNode nodoOriginal = objectMapper.valueToTree(estOriginal);
+            JsonNode nodoModificado = atributosModificados.apply(nodoOriginal);
+            Estudiante estActualizado = objectMapper.treeToValue(nodoModificado,Estudiante.class);
+            estudiantes.remove(codigo);
+            estudiantes.put(codigo, estActualizado);
+            return new ResponseEntity<>("Se modificó al estudiante "+codigo + " mediante JSON PATCH.",HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("Error fatal al modificar un estudiante con JsonPatch", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     @DeleteMapping("/estudiantes/{c}")
     public ResponseEntity<Object> eliminarEsetudiante(@PathVariable("c") String cod){
         estudiantes.remove(cod);
         return new ResponseEntity<>("Se eliminó al estudiante "+cod, HttpStatus.OK);
+    }
+    @GetMapping("/estudiantes/status")
+    public ResponseEntity<String> headersPersonalizados(){
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Modo-EmpresaX","CRISIS");
+        headers.add("Permiso-Cifrado","true");
+        headers.add("Cantidad-Amacenes","245");
+        return new ResponseEntity<>("Nada",headers,HttpStatus.OK);
+    }
+    @GetMapping("/estudiantes/{codigo}/edad")
+    public ResponseEntity<String> edad(@PathVariable("codigo") String codigo){
+        Estudiante est = estudiantes.get(codigo);
+        int edad = est.getEdad();
+        return ResponseEntity.status(HttpStatus.OK).body("La edad es: "+edad);
     }
 }
