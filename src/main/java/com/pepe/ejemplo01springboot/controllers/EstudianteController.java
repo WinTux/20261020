@@ -3,7 +3,9 @@ package com.pepe.ejemplo01springboot.controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatch;
+import com.pepe.ejemplo01springboot.Exceptions.EstudianteNoEncontradoException;
 import com.pepe.ejemplo01springboot.Models.Estudiante;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +14,11 @@ import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.URI;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,7 +66,8 @@ public class EstudianteController {
     public ResponseEntity<Object> modificarEstudianteConPatch(@PathVariable("codigo") String codigo, @RequestBody Map<String,Object> atributosModificados){
         Estudiante estOriginal = estudiantes.get(codigo);
         if(estOriginal == null)
-            return ResponseEntity.notFound().build();
+            //return ResponseEntity.notFound().build();
+            throw new EstudianteNoEncontradoException();
         else{
             atributosModificados.forEach((atributo, valorNuevo) -> {
                 Field campo = ReflectionUtils.findField(Estudiante.class, atributo);
@@ -104,10 +110,25 @@ public class EstudianteController {
         headers.add("Cantidad-Amacenes","245");
         return new ResponseEntity<>("Nada",headers,HttpStatus.OK);
     }
-    @GetMapping("/estudiantes/{codigo}/edad")
-    public ResponseEntity<String> edad(@PathVariable("codigo") String codigo){
+    @GetMapping("/estudiantes/edad")
+    public ResponseEntity<String> edad(@RequestParam("codigo") String codigo){
         Estudiante est = estudiantes.get(codigo);
+        if(est == null){
+            return ResponseEntity.badRequest().body("El código que se proporcionó no existe. Este sería un código de estado 404 (se pasa BadRequest para practicar).");
+        }
+        LocalDate fechaActual = LocalDate.now();
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         int edad = est.getEdad();
-        return ResponseEntity.status(HttpStatus.OK).body("La edad es: "+edad);
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .header("Fecha-Del-Servidor",fechaActual.format(formateador))
+                .header("Codigo-Estudiante",codigo)
+                .body("La edad es: "+edad);
+    }
+    @GetMapping("/estudiantes/pruebacruda")
+    public void ejemploCrudo(HttpServletResponse response) throws IOException {
+        response.setHeader("Codigo-Depuracion","XZ-400");
+        response.setStatus(418);
+        response.getWriter().println("Exito");
     }
 }
