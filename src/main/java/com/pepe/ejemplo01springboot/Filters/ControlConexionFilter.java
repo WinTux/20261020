@@ -20,7 +20,6 @@ public class ControlConexionFilter implements Filter {
         System.out.println("Remote host: "+ servletRequest.getRemoteHost());
         System.out.println("Remote address: "+ servletRequest.getRemoteAddr());
         filterChain.doFilter(servletRequest,servletResponse);
-        // TODO debemos implementar la clase de configuración.
     }
 
     @Override

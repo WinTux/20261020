@@ -6,14 +6,20 @@ import com.github.fge.jsonpatch.JsonPatch;
 import com.pepe.ejemplo01springboot.Exceptions.EstudianteNoEncontradoException;
 import com.pepe.ejemplo01springboot.Models.Estudiante;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.URI;
@@ -130,5 +136,30 @@ public class EstudianteController {
         response.setHeader("Codigo-Depuracion","XZ-400");
         response.setStatus(418);
         response.getWriter().println("Exito");
+    }
+
+    // Manejo de archivos
+    @PostMapping(path = "/estudiantes/subida", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<String> archivoSubir(@RequestParam("archivito") MultipartFile arch) throws IOException{
+        File elArchivo = new File("/home/rusok/Documentos/"+arch.getOriginalFilename());
+        FileOutputStream fos = new FileOutputStream(elArchivo);
+        fos.write(arch.getBytes());
+        return ResponseEntity.ok("El archivo se recibió correctamente.");
+    }
+    @GetMapping(path = "/estudiantes/bajada")
+    public ResponseEntity<Object> archivoBajar() throws IOException{
+        String nombreArch = "/home/rusok/Documentos/docker-compose.yaml";
+        File archivo = new File(nombreArch);
+        InputStreamResource recurso = new InputStreamResource(new FileInputStream(archivo));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        headers.add("Pragma","no-cache");
+        headers.add("Expires","0");
+        ResponseEntity<Object> re = ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(archivo.length())
+                .contentType(MediaType.parseMediaType("application/txt"))
+                .body(recurso);
+        return re;
     }
 }

@@ -1,35 +1,122 @@
-2026-10-30 ---> 19:16:10.143 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 47465 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-10-30 ---> 19:16:10.146 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-10-30 ---> 19:16:10.147 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
-2026-10-30 ---> 19:16:11.301 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
-2026-10-30 ---> 19:16:11.320 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
-2026-10-30 ---> 19:16:11.322 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
-2026-10-30 ---> 19:16:11.322 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
-2026-10-30 ---> 19:16:11.353 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1148 ms 
-2026-10-30 ---> 19:16:12.093 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-10-30 ---> 19:16:12.132 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
-2026-10-30 ---> 19:16:12.141 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
-2026-10-30 ---> 19:16:12.147 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 2.648 seconds (process running for 3.477) 
-2026-10-30 ---> 19:16:12.566 INFO  [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2026-10-30 ---> 19:16:12.567 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
-2026-10-30 ---> 19:16:12.572 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 4 ms 
-2026-10-30 ---> 19:18:07.959 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
-2026-10-30 ---> 19:18:07.961 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
-2026-10-30 ---> 19:29:31.960 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 48047 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-10-30 ---> 19:29:31.963 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-10-30 ---> 19:29:31.963 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
-2026-10-30 ---> 19:29:32.957 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
-2026-10-30 ---> 19:29:32.969 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
-2026-10-30 ---> 19:29:32.970 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
-2026-10-30 ---> 19:29:32.970 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
-2026-10-30 ---> 19:29:32.994 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 989 ms 
-2026-10-30 ---> 19:29:33.689 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-10-30 ---> 19:29:33.727 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
-2026-10-30 ---> 19:29:33.736 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
-2026-10-30 ---> 19:29:33.742 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 2.248 seconds (process running for 2.808) 
-2026-10-30 ---> 19:29:34.216 INFO  [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2026-10-30 ---> 19:29:34.216 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
-2026-10-30 ---> 19:29:34.218 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 1 ms 
-2026-10-30 ---> 19:29:42.557 INFO  [http-nio-7001-exec-1] c.p.e.I.EstudianteInterceptor ++: Usuario: null, host: 0:0:0:0:0:0:0:1 desde la dirección 0:0:0:0:0:0:0:1:60652 editará al estudiante 1 (/estudiantes/1) 
-2026-10-30 ---> 19:34:10.352 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
-2026-10-30 ---> 19:34:10.355 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-03 ---> 18:53:11.624 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 13586 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-03 ---> 18:53:11.627 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-03 ---> 18:53:11.628 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-03 ---> 18:53:12.735 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
+2026-11-03 ---> 18:53:12.745 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 18:53:12.747 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-03 ---> 18:53:12.747 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-03 ---> 18:53:12.797 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1126 ms 
+2026-11-03 ---> 18:53:13.176 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+
+Using generated security password: 69ad840c-b127-4bb9-bea7-d6311bcc2a1b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+2026-11-03 ---> 18:53:13.181 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-03 ---> 18:53:13.511 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-03 ---> 18:53:13.704 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 18:53:13.712 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
+2026-11-03 ---> 18:53:13.720 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 2.758 seconds (process running for 3.431) 
+2026-11-03 ---> 18:53:14.011 INFO  [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-03 ---> 18:53:14.012 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-03 ---> 18:53:14.014 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 2 ms 
+2026-11-03 ---> 18:55:08.397 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-03 ---> 18:55:08.402 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-03 ---> 19:01:25.456 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 15323 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-03 ---> 19:01:25.461 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-03 ---> 19:01:25.463 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-03 ---> 19:01:26.497 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
+2026-11-03 ---> 19:01:26.506 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:01:26.507 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-03 ---> 19:01:26.508 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-03 ---> 19:01:26.540 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1026 ms 
+2026-11-03 ---> 19:01:26.940 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+
+Using generated security password: 4d5e6c55-6bce-4b1e-9897-136b75ab3def
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+2026-11-03 ---> 19:01:26.950 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-03 ---> 19:01:27.482 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-03 ---> 19:01:27.519 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:01:27.528 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
+2026-11-03 ---> 19:01:27.534 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 2.553 seconds (process running for 3.243) 
+2026-11-03 ---> 19:01:27.659 INFO  [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-03 ---> 19:01:27.660 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-03 ---> 19:01:27.662 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 2 ms 
+2026-11-03 ---> 19:05:59.672 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-03 ---> 19:05:59.675 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-03 ---> 19:31:54.009 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 22597 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-03 ---> 19:31:54.012 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-03 ---> 19:31:54.013 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-03 ---> 19:31:55.635 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
+2026-11-03 ---> 19:31:55.646 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:31:55.647 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-03 ---> 19:31:55.648 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-03 ---> 19:31:55.689 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1572 ms 
+2026-11-03 ---> 19:31:56.083 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+
+Using generated security password: 3e3aacb7-0832-4d78-b757-6f612b1afd2a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+2026-11-03 ---> 19:31:56.092 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-03 ---> 19:31:56.602 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-03 ---> 19:31:56.635 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:31:56.642 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
+2026-11-03 ---> 19:31:56.648 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 3.643 seconds (process running for 4.606) 
+2026-11-03 ---> 19:31:57.065 INFO  [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-03 ---> 19:31:57.066 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-03 ---> 19:31:57.069 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 3 ms 
+2026-11-03 ---> 19:36:00.563 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-03 ---> 19:36:00.573 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-03 ---> 19:36:10.818 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 23753 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-03 ---> 19:36:10.823 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-03 ---> 19:36:10.824 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-03 ---> 19:36:12.258 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
+2026-11-03 ---> 19:36:12.275 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:36:12.293 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-03 ---> 19:36:12.294 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-03 ---> 19:36:12.342 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1455 ms 
+2026-11-03 ---> 19:36:12.740 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+
+Using generated security password: d23ca223-7589-4d7a-b4eb-8037552809cf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+2026-11-03 ---> 19:36:12.744 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-03 ---> 19:36:13.195 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-03 ---> 19:36:13.236 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:36:13.250 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
+2026-11-03 ---> 19:36:13.258 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 3.019 seconds (process running for 3.962) 
+2026-11-03 ---> 19:36:13.719 INFO  [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-03 ---> 19:36:13.719 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-03 ---> 19:36:13.721 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 2 ms 
+2026-11-03 ---> 19:38:20.782 WARN  [http-nio-7001-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver ++: Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded] 
+2026-11-03 ---> 19:38:20.788 WARN  [http-nio-7001-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver ++: Resolved [org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded] 
+2026-11-03 ---> 19:40:07.743 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-03 ---> 19:40:07.745 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-03 ---> 19:50:43.398 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 27746 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-03 ---> 19:50:43.401 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-03 ---> 19:50:43.401 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-03 ---> 19:50:45.280 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
+2026-11-03 ---> 19:50:45.289 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:50:45.290 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-03 ---> 19:50:45.290 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-03 ---> 19:50:45.318 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1846 ms 
+2026-11-03 ---> 19:50:45.846 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+
+Using generated security password: 77327d1e-883c-4043-83d8-43cb2b00664a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+2026-11-03 ---> 19:50:45.850 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-03 ---> 19:50:46.394 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-03 ---> 19:50:46.461 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
+2026-11-03 ---> 19:50:46.476 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
+2026-11-03 ---> 19:50:46.491 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 3.779 seconds (process running for 4.738) 
+2026-11-03 ---> 19:50:46.780 INFO  [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-03 ---> 19:50:46.781 INFO  [RMI TCP Connection(4)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-03 ---> 19:50:46.786 INFO  [RMI TCP Connection(4)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 4 ms 
+2026-11-03 ---> 19:56:28.732 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-03 ---> 19:56:28.735 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
