@@ -4,8 +4,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatch;
 import com.pepe.ejemplo01springboot.Exceptions.EstudianteNoEncontradoException;
+import com.pepe.ejemplo01springboot.Models.Est;
 import com.pepe.ejemplo01springboot.Models.Estudiante;
+import com.pepe.ejemplo01springboot.Services.EstudianteService;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -26,11 +29,14 @@ import java.net.URI;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 public class EstudianteController {
     ObjectMapper objectMapper = new ObjectMapper();
+    @Autowired
+    private EstudianteService estServ;
     private static Map<String, Estudiante> estudiantes = new HashMap<>();
     static {
         Estudiante e1 = new Estudiante("Pepe","Perales",21,"Contabilidad","est001");
@@ -43,11 +49,14 @@ public class EstudianteController {
 
     @GetMapping("/estudiantes")
     public ResponseEntity<Object> getEstudiantes(){
-        return  new ResponseEntity<>(estudiantes.values(), HttpStatus.OK);
+        //return  new ResponseEntity<>(estudiantes.values(), HttpStatus.OK);
+        List<Est> ests = estServ.lista();
+        return new ResponseEntity<>(ests, HttpStatus.OK);
     }
     @GetMapping("/estudiantes/{codigo}")
-    public ResponseEntity<Object> getEstudiante(@PathVariable("codigo") String codigo){
-        Estudiante est = estudiantes.get(codigo);
+    public ResponseEntity<Object> getEstudiante(@PathVariable("codigo") int codigo){
+        // Estudiante est = estudiantes.get(codigo);
+        Est est = estServ.getEstudiantePorMatricula(codigo);
         if(est == null)
             return ResponseEntity.notFound().build();
         else

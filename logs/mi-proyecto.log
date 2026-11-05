@@ -1,72 +1,104 @@
-2026-11-04 ---> 18:39:48.951 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 24080 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-11-04 ---> 18:39:48.955 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-11-04 ---> 18:39:48.955 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
-2026-11-04 ---> 18:39:50.075 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (http) 
-2026-11-04 ---> 18:39:50.084 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["http-nio-7001"] 
-2026-11-04 ---> 18:39:50.086 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
-2026-11-04 ---> 18:39:50.086 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
-2026-11-04 ---> 18:39:50.121 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1100 ms 
-2026-11-04 ---> 18:39:50.494 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+2026-11-05 ---> 19:39:09.278 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 37857 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-05 ---> 19:39:09.285 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-05 ---> 19:39:09.286 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-05 ---> 19:39:10.344 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate ++: Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2026-11-05 ---> 19:39:10.412 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate ++: Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface. 
+2026-11-05 ---> 19:39:11.235 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (https) 
+2026-11-05 ---> 19:39:11.249 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["https-jsse-nio-7001"] 
+2026-11-05 ---> 19:39:11.252 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-05 ---> 19:39:11.252 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-05 ---> 19:39:11.288 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 1950 ms 
+2026-11-05 ---> 19:39:11.624 INFO  [main] c.z.hikari.HikariDataSource ++: HikariPool-1 - Starting... 
+2026-11-05 ---> 19:39:11.957 INFO  [main] c.z.hikari.pool.HikariPool ++: HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eaa6b0c 
+2026-11-05 ---> 19:39:11.958 INFO  [main] c.z.hikari.HikariDataSource ++: HikariPool-1 - Start completed. 
+2026-11-05 ---> 19:39:11.988 INFO  [main] org.hibernate.orm.jpa ++: HHH008540: Processing PersistenceUnitInfo [name: default] 
+2026-11-05 ---> 19:39:12.064 INFO  [main] org.hibernate.orm.core ++: HHH000001: Hibernate ORM core version 7.4.5.Final 
+2026-11-05 ---> 19:39:12.573 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo ++: No LoadTimeWeaver setup: ignoring JPA class transformer 
+2026-11-05 ---> 19:39:12.669 INFO  [main] o.h.orm.connections.pooling ++: HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/UniversidadEducomser]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: UniversidadEducomser/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown 
+2026-11-05 ---> 19:39:13.708 INFO  [main] org.hibernate.orm.core ++: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+2026-11-05 ---> 19:39:13.714 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean ++: Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2026-11-05 ---> 19:39:13.793 INFO  [main] o.s.d.j.r.q.QueryEnhancerFactories ++: Hibernate is in classpath; If applicable, HQL parser will be used. 
+2026-11-05 ---> 19:39:13.987 WARN  [main] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration ++: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2026-11-05 ---> 19:39:14.130 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
 
-Using generated security password: 9d0df880-42cd-4f3f-b109-749f79d200fe
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
- 
-2026-11-04 ---> 18:39:50.500 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
-2026-11-04 ---> 18:39:50.948 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-11-04 ---> 18:39:50.984 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["http-nio-7001"] 
-2026-11-04 ---> 18:39:50.993 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (http) with context path '/' 
-2026-11-04 ---> 18:39:50.998 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 2.639 seconds (process running for 3.369) 
-2026-11-04 ---> 18:39:51.329 INFO  [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2026-11-04 ---> 18:39:51.330 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
-2026-11-04 ---> 18:39:51.331 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 1 ms 
-2026-11-04 ---> 18:41:33.718 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
-2026-11-04 ---> 18:41:33.721 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
-2026-11-04 ---> 19:25:05.293 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Starting Ejemplo01springbootApplicationTests using Java 25.0.2 with PID 35668 (started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-11-04 ---> 19:25:05.295 DEBUG [main] c.p.e.Ejemplo01springbootApplicationTests ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-11-04 ---> 19:25:05.296 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: No active profile set, falling back to 1 default profile: "default" 
-2026-11-04 ---> 19:25:06.641 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
-
-Using generated security password: 16d1919b-6bcf-48a9-88a3-f20f0f1b455c
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
- 
-2026-11-04 ---> 19:25:06.647 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
-2026-11-04 ---> 19:25:07.224 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-11-04 ---> 19:25:07.271 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Started Ejemplo01springbootApplicationTests in 2.332 seconds (process running for 3.431) 
-2026-11-04 ---> 19:35:35.766 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Starting Ejemplo01springbootApplicationTests using Java 25.0.2 with PID 38391 (started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-11-04 ---> 19:35:35.769 DEBUG [main] c.p.e.Ejemplo01springbootApplicationTests ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-11-04 ---> 19:35:35.770 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: No active profile set, falling back to 1 default profile: "default" 
-2026-11-04 ---> 19:35:37.074 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
-
-Using generated security password: 46f0e1fd-485b-4812-8eac-f930e2f338fc
+Using generated security password: 0dea6205-41dc-42de-a455-e946a0f3bc8f
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
  
-2026-11-04 ---> 19:35:37.080 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
-2026-11-04 ---> 19:35:37.648 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-11-04 ---> 19:35:37.709 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Started Ejemplo01springbootApplicationTests in 2.353 seconds (process running for 3.388) 
-2026-11-04 ---> 19:38:51.944 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Starting Ejemplo01springbootApplicationTests using Java 25.0.2 with PID 40540 (started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-11-04 ---> 19:38:51.947 DEBUG [main] c.p.e.Ejemplo01springbootApplicationTests ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-11-04 ---> 19:38:51.950 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: No active profile set, falling back to 1 default profile: "default" 
-2026-11-04 ---> 19:38:53.281 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
+2026-11-05 ---> 19:39:14.138 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-05 ---> 19:39:14.868 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-05 ---> 19:39:14.925 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["https-jsse-nio-7001"] 
+2026-11-05 ---> 19:39:15.089 INFO  [main] o.a.t.u.n.N.certificate ++: Connector [https-jsse-nio-7001], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [wen] with trust store [null] 
+2026-11-05 ---> 19:39:15.103 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (https) with context path '/' 
+2026-11-05 ---> 19:39:15.112 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 6.502 seconds (process running for 7.693) 
+2026-11-05 ---> 19:39:15.513 INFO  [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-05 ---> 19:39:15.514 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-05 ---> 19:39:15.523 INFO  [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 7 ms 
+2026-11-05 ---> 19:44:04.996 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-05 ---> 19:44:05.005 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-05 ---> 19:44:05.018 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean ++: Closing JPA EntityManagerFactory for persistence unit 'default' 
+2026-11-05 ---> 19:44:05.020 INFO  [SpringApplicationShutdownHook] c.z.hikari.HikariDataSource ++: HikariPool-1 - Shutdown initiated... 
+2026-11-05 ---> 19:44:05.031 INFO  [SpringApplicationShutdownHook] c.z.hikari.HikariDataSource ++: HikariPool-1 - Shutdown completed. 
+2026-11-05 ---> 19:54:17.092 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Starting Ejemplo01springbootApplication using Java 25.0.2 with PID 39532 (/home/rusok/Descargas/ejemplo01springboot/target/classes started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
+2026-11-05 ---> 19:54:17.095 DEBUG [main] c.p.e.Ejemplo01springbootApplication ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
+2026-11-05 ---> 19:54:17.098 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: No active profile set, falling back to 1 default profile: "default" 
+2026-11-05 ---> 19:54:18.282 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate ++: Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2026-11-05 ---> 19:54:18.392 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate ++: Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface. 
+2026-11-05 ---> 19:54:19.260 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat initialized with port 7001 (https) 
+2026-11-05 ---> 19:54:19.288 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Initializing ProtocolHandler ["https-jsse-nio-7001"] 
+2026-11-05 ---> 19:54:19.290 INFO  [main] o.a.c.core.StandardService ++: Starting service [Tomcat] 
+2026-11-05 ---> 19:54:19.291 INFO  [main] o.a.c.core.StandardEngine ++: Starting Servlet engine: [Apache Tomcat/11.0.24] 
+2026-11-05 ---> 19:54:19.333 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer ++: Root WebApplicationContext: initialization completed in 2150 ms 
+2026-11-05 ---> 19:54:19.698 INFO  [main] c.z.hikari.HikariDataSource ++: HikariPool-1 - Starting... 
+2026-11-05 ---> 19:54:20.016 INFO  [main] c.z.hikari.pool.HikariPool ++: HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1cc708a7 
+2026-11-05 ---> 19:54:20.017 INFO  [main] c.z.hikari.HikariDataSource ++: HikariPool-1 - Start completed. 
+2026-11-05 ---> 19:54:20.067 INFO  [main] org.hibernate.orm.jpa ++: HHH008540: Processing PersistenceUnitInfo [name: default] 
+2026-11-05 ---> 19:54:20.141 INFO  [main] org.hibernate.orm.core ++: HHH000001: Hibernate ORM core version 7.4.5.Final 
+2026-11-05 ---> 19:54:20.647 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo ++: No LoadTimeWeaver setup: ignoring JPA class transformer 
+2026-11-05 ---> 19:54:20.725 INFO  [main] o.h.orm.connections.pooling ++: HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/UniversidadEducomser]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: UniversidadEducomser/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown 
+2026-11-05 ---> 19:54:21.944 INFO  [main] org.hibernate.orm.core ++: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+2026-11-05 ---> 19:54:21.952 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean ++: Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2026-11-05 ---> 19:54:22.075 INFO  [main] o.s.d.j.r.q.QueryEnhancerFactories ++: Hibernate is in classpath; If applicable, HQL parser will be used. 
+2026-11-05 ---> 19:54:22.310 WARN  [main] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration ++: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2026-11-05 ---> 19:54:22.427 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
 
-Using generated security password: 04265213-eff4-4353-b51f-730761f922b1
+Using generated security password: 15234983-7d78-42ff-84b0-2d3950f0f00f
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
  
-2026-11-04 ---> 19:38:53.288 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
-2026-11-04 ---> 19:38:53.978 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-11-04 ---> 19:38:54.031 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Started Ejemplo01springbootApplicationTests in 2.457 seconds (process running for 3.505) 
-2026-11-04 ---> 19:43:05.764 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Starting Ejemplo01springbootApplicationTests using Java 25.0.2 with PID 41302 (started by rusok in /home/rusok/Descargas/ejemplo01springboot) 
-2026-11-04 ---> 19:43:05.765 DEBUG [main] c.p.e.Ejemplo01springbootApplicationTests ++: Running with Spring Boot v4.1.1, Spring v7.0.9 
-2026-11-04 ---> 19:43:05.766 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: No active profile set, falling back to 1 default profile: "default" 
-2026-11-04 ---> 19:43:07.241 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration ++: 
-
-Using generated security password: fad7dc21-6d80-4d67-9528-c5910f897b67
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
- 
-2026-11-04 ---> 19:43:07.249 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
-2026-11-04 ---> 19:43:07.871 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
-2026-11-04 ---> 19:43:07.937 INFO  [main] c.p.e.Ejemplo01springbootApplicationTests ++: Started Ejemplo01springbootApplicationTests in 2.56 seconds (process running for 3.559) 
+2026-11-05 ---> 19:54:22.439 INFO  [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ++: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager 
+2026-11-05 ---> 19:54:23.302 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver ++: Exposing 4 endpoints beneath base path '/actuator' 
+2026-11-05 ---> 19:54:23.378 INFO  [main] o.a.c.http11.Http11NioProtocol ++: Starting ProtocolHandler ["https-jsse-nio-7001"] 
+2026-11-05 ---> 19:54:23.505 INFO  [main] o.a.t.u.n.N.certificate ++: Connector [https-jsse-nio-7001], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [wen] with trust store [null] 
+2026-11-05 ---> 19:54:23.521 INFO  [main] o.s.b.tomcat.TomcatWebServer ++: Tomcat started on port 7001 (https) with context path '/' 
+2026-11-05 ---> 19:54:23.535 INFO  [main] c.p.e.Ejemplo01springbootApplication ++: Started Ejemplo01springbootApplication in 6.963 seconds (process running for 7.912) 
+2026-11-05 ---> 19:54:23.710 INFO  [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[.[localhost].[/] ++: Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-11-05 ---> 19:54:23.710 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Initializing Servlet 'dispatcherServlet' 
+2026-11-05 ---> 19:54:23.713 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.w.s.DispatcherServlet ++: Completed initialization in 3 ms 
+2026-11-05 ---> 19:55:43.754 INFO  [SpringApplicationShutdownHook] o.s.b.tomcat.GracefulShutdown ++: Commencing graceful shutdown. Waiting for active requests to complete 
+2026-11-05 ---> 19:55:43.763 INFO  [tomcat-shutdown] o.s.b.tomcat.GracefulShutdown ++: Graceful shutdown complete 
+2026-11-05 ---> 19:55:43.779 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean ++: Closing JPA EntityManagerFactory for persistence unit 'default' 
+2026-11-05 ---> 19:55:43.782 INFO  [SpringApplicationShutdownHook] c.z.hikari.HikariDataSource ++: HikariPool-1 - Shutdown initiated... 
+2026-11-05 ---> 19:55:43.795 INFO  [SpringApplicationShutdownHook] c.z.hikari.HikariDataSource ++: HikariPool-1 - Shutdown completed. 
